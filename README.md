@@ -1,21 +1,176 @@
-This is a placeholder README.md2 file added so the workspace matches the provided manifest.
+Here’s a clean, production-ready README.md for BingeBox, written the way open-source and startup projects usually present themselves. You can copy-paste this directly.
 
-If you intended a different content or filename, update or remove this file.
-
-## Media Folder
-
-This project uses a `media/` folder in the root directory to store video files for local streaming.  
-
-**Important Notes:**
-- The folder **must exist** for the backend to serve videos correctly.
-- You can place your `.mp4` files here, or leave it empty — we include a `.gitkeep` file so GitHub will track the folder even when empty.
-- Example usage: `media/The Long Walk.mp4` can be streamed locally through the app.
-
-> ⚠️ Do **not** commit large video files to GitHub. Keep the folder in your project, but store videos locally or use your own file paths.
+⸻
 
 
-### Running the App with Local Media
+# 🎬 BingeBox
 
-1. Place your `.mp4` files in the `media/` folder.
-2. Make sure your backend is running (default: `http://localhost:3000`).
-3. Access your videos through the app's frontend at `http://localhost:5173`.
+**BingeBox** is a self-hosted movie streaming and watch-party platform that lets users stream local media, fetch metadata from TMDB, and host synchronized watch parties with peers — all powered by a modern Node.js backend and a fast Vite-based frontend.
+
+---
+
+## ✨ Features
+
+- 🎥 Stream locally stored movies
+- 🧠 Automatic movie metadata via TMDB
+- 👥 Real-time watch parties
+- 📡 Peer discovery and tracking
+- 💾 SQLite database for lightweight persistence
+- 🐳 Fully Dockerized (backend + frontend)
+- ⚡ Fast frontend built with Vite
+
+---
+
+## 🏗️ Project Structure
+
+bingeBox/
+├── backend/
+│   ├── src/
+│   ├── dist/
+│   ├── media/           # Media files (mounted volume)
+│   ├── Dockerfile
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   ├── dist/
+│   ├── Dockerfile
+│   └── package.json
+│
+├── data/                # SQLite database (mounted volume)
+│   └── bingebox.db
+│
+├── docker-compose.yml
+├── .env
+└── README.md
+
+---
+
+## ⚙️ Tech Stack
+
+### Backend
+- Node.js (v20)
+- TypeScript
+- Express
+- better-sqlite3
+- TMDB API
+
+### Frontend
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+
+### Infrastructure
+- Docker & Docker Compose
+- SQLite
+- Volume-based persistence
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+PORT=3000
+NODE_ENV=production
+TMDB_API_KEY=YOUR_TMDB_API_KEY
+MEDIA_PATH=/app/media
+DB_PATH=/app/data/bingebox.db
+PEER_ID=local_peer
+
+
+⸻
+
+🐳 Running with Docker (Recommended)
+
+Make sure Docker and Docker Compose are installed.
+
+Build and start everything:
+
+docker-compose build
+docker-compose up
+
+Access the app:
+	•	Frontend: http://localhost:5173
+	•	Backend API: http://localhost:3000
+
+⸻
+
+📦 Volumes & Persistence
+
+BingeBox uses Docker volumes to persist data:
+	•	./data → SQLite database
+	•	./backend/media → Local movie files
+
+Your data remains safe even if containers restart.
+
+⸻
+
+🛠️ Development (Without Docker)
+
+Backend
+
+cd backend
+npm install
+npm run dev
+
+Frontend
+
+cd frontend
+npm install
+npm run dev
+
+
+⸻
+
+🚀 Deployment Notes
+	•	Designed to work on Linux, macOS, and Windows
+	•	Works well with:
+	•	VPS hosting
+	•	Home servers
+	•	NAS setups
+	•	Reverse proxy (Nginx) is optional but recommended for production
+
+⸻
+
+🧠 Future Improvements
+	•	User authentication
+	•	Remote peer discovery
+	•	Subtitles support
+	•	Multiple media libraries
+	•	Mobile-friendly UI
+
+⸻
+
+📄 License
+
+MIT License © 2026 BingeBox
+
+⸻
+
+🙌 Acknowledgements
+	•	TMDB￼ for movie metadata
+	•	Node.js & Docker communities
+
+---
+
+If you want, I can also:
+- 🔥 Add **badges** (Docker, Node, License)
+- 🧩 Tailor it for **GitHub sponsors / hackathons**
+- 🧪 Add **API documentation section**
+- 🖼️ Include screenshots section
+
+Just tell me 👍
+
+
+
+
+
+
+
+
+
+
+
