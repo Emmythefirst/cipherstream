@@ -1,8 +1,3 @@
-Here’s a clean, production-ready README.md for BingeBox, written the way open-source and startup projects usually present themselves. You can copy-paste this directly.
-
-⸻
-
-
 # 🎬 BingeBox
 
 **BingeBox** is a self-hosted movie streaming and watch-party platform that lets users stream local media, fetch metadata from TMDB, and host synchronized watch parties with peers — all powered by a modern Node.js backend and a fast Vite-based frontend.
@@ -155,14 +150,6 @@ MIT License © 2026 BingeBox
 	•	Node.js & Docker communities
 
 ---
-
-If you want, I can also:
-- 🔥 Add **badges** (Docker, Node, License)
-- 🧩 Tailor it for **GitHub sponsors / hackathons**
-- 🧪 Add **API documentation section**
-- 🖼️ Include screenshots section
-
-Just tell me 👍
 
 
 
