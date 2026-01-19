@@ -17,7 +17,7 @@
 ---
 
 ## 🏗️ Project Structure
-
+```
 bingeBox/
 ├── backend/
 │   ├── src/
@@ -38,7 +38,7 @@ bingeBox/
 ├── docker-compose.yml
 ├── .env
 └── README.md
-
+```
 ---
 
 ## ⚙️ Tech Stack
